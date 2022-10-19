@@ -7,7 +7,7 @@ import axios from "axios";
 const Darshboard = () => {
   let [books, setBooks] = useState<any[]>([]);
   let [characters, setCharacters] = useState<any[]>([]);
-
+  let [ searchText, setSearchText ] = useState<String>("");
 
   useEffect(() => {
     const mergeRequest = () => {
@@ -31,8 +31,8 @@ const Darshboard = () => {
   return (
     <section className="flex flex-col justify-center items-center p-5">
       <div className="md:w-[80%]">
-        <Search />
-        <List books={books} characters={characters} />
+        <Search setSearchText={setSearchText} />
+        <List books={books} searchText={searchText} characters={characters} />
       </div>
     </section>
   );
