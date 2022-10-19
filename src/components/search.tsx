@@ -1,7 +1,7 @@
 
 const Search = (props:any) => {
   const searchChange = (e:any) => {
-      props.searchText(e.target.value)
+      props.setSearchText(e.target.value)
   }
     return (
       <div className="flex items-center w-full bg-[#111620] p-2 text-white rounded">
